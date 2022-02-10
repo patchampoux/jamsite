@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://patchampoux.github.io/jamsite/premium/article-one/</loc>
+    <lastmod>2022-02-04T15:50:36-05:00</lastmod>
+  </url><url>
+    <loc>https://patchampoux.github.io/jamsite/</loc>
+    <lastmod>2022-02-04T15:50:36-05:00</lastmod>
+  </url><url>
+    <loc>https://patchampoux.github.io/jamsite/first-page/</loc>
+    <lastmod>2019-11-06T17:00:08+02:00</lastmod>
+  </url><url>
+    <loc>https://patchampoux.github.io/jamsite/second-page/</loc>
+    <lastmod>2019-11-06T17:00:08+02:00</lastmod>
+  </url><url>
+    <loc>https://patchampoux.github.io/jamsite/categories/</loc>
+  </url><url>
+    <loc>https://patchampoux.github.io/jamsite/tags/</loc>
+  </url>
+</urlset>
