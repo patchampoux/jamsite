@@ -1,0 +1,5 @@
+# JAMsite
+
+---
+
+Built with HUGO

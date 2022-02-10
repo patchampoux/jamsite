@@ -1,0 +1,106 @@
+<style>
+	.nav {
+		overflow: visible;
+		padding: 0.1rem;
+	}
+
+	#search {
+		border: 1px solid lightgray;
+		bottom: 0.2rem;
+		float: right;
+		padding: 0.5rem 1rem;
+		position: relative;
+		width: 15rem;
+	}
+
+	#search-results {
+		background-color: #ffffff;
+		box-shadow: 1px 1px 5px rgba(0, 0, 0, .35);
+		position: absolute;
+		right: 0;
+	}
+
+	#search-results.hide {
+		display: none;
+	}
+
+	#search-results a {
+		border-bottom: 1px solid lightgray;
+		display: block;
+		font-weight: 700;
+		padding: 0.5rem;
+		width: 12rem;
+	}
+
+	#search-results a:hover {
+		background-color: dodgerblue;
+		color: #ffffff;
+	}
+</style>
+
+<input type="text" id="search" placeholder="Search">
+<div id="search-results" class="hide"></div>
+
+<script src="https://unpkg.com/lunr/lunr.js"></script>
+
+<script>
+	const search = document.getElementById("search");
+	const searchResults = document.getElementById("search-results");
+
+	// Show results only on focus
+	search.addEventListener('focus', e => {
+		searchResults.classList.remove('hide');
+	});
+
+	search.addEventListener('blur', e => {
+		setTimeout(() => {
+			searchResults.classList.add('hide');
+		}, 100);
+	});
+
+	var documents = [{
+		"name": "Lunr",
+		"text": "Like Solr, but much smaller, and not as bright."
+	}, {
+		"name": "React",
+		"text": "A JavaScript library for building user interfaces."
+	}, {
+		"name": "Lodash",
+		"text": "A modern JavaScript utility library delivering modularity, performance & extras."
+	}]
+
+	// Add results to HTML
+	search.addEventListener('keyup', function() {
+		searchResults.innerHTML = '';
+
+		if (!this.value) return;
+
+		let lunrResults = window.idx.search(this.value);
+
+		lunrResults.forEach(page => {
+			// Get refs
+			let pageMeta = page.ref.split('||');
+
+			let resultNode = document.createElement('a');
+			resultNode.innerText = pageMeta[0];
+			resultNode.href = pageMeta[1];
+			searchResults.appendChild(resultNode);
+		});
+	});
+
+	// Fetch search index
+	fetch('/index.json').then(res => {
+		// Parse JSON
+		res.json().then(searchIndex => {
+			// Build Lunr index
+			window.idx = lunr(function () {
+				// Define Lunr fields and refs
+				this.ref('meta')
+				this.field('title')
+				this.field('content')
+
+				searchIndex.forEach(page => this.add(page))
+			})
+		});
+	});
+</script>
