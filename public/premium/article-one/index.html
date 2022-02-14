@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-		<title>Categories &middot; JAMSite</title>
+		<title>Article One &middot; JAMSite</title>
 
 		
   		<link rel="stylesheet" href="/jamsite/css/style.css">
@@ -15,7 +15,7 @@
 		<link rel="apple-touch-icon" sizes="180x180" href="/jamsite/images/apple-touch-icon.png">
 
 		
-		<link href="/jamsite/categories/index.xml" rel="alternate" type="application/rss+xml" title="JAMSite" />
+		<link href="" rel="alternate" type="application/rss+xml" title="JAMSite" />
 	</head>
 
     <body>
@@ -139,20 +139,69 @@
 		</nav>
 
         
+
+<style media="screen">
+
+	#signin {
+		background: #DEDEDE;
+		border-radius: 5px;
+		padding: 1rem;
+	}
+
+	#signin input, #signin button {
+		display: block;
+		padding: 0.5rem 1rem;
+		width: 100%;
+		font-size: 1.25rem;
+		border-radius: 5px;
+		margin-bottom: 1rem;
+		outline: none;
+		border: none;
+	}
+
+	#signin button {
+		background: dodgerblue;
+		color: white;
+	}
+
+</style>
+
 <main>
-    <h1>Categories</h1>
-	<div class="catalogue">
-        <ul></ul>
+	<div class="post">
+		<div class="post-info">
+    <span>Written by</span>
+        Author Name
+        <br>
+        <span>on&nbsp;</span><time datetime="2022-02-04 15:50:36 -0500 EST">February 4, 2022</time>
+</div>
+		<h1 class="post-title">Article One</h1>
+<div class="post-line"></div>
+
+		
+
+		<div class="premium-content">
+			<h2 style="text-align: center;">Sign in to view premium content.</h2>
+			<form id="signin">
+				<input type="text" name="username" placeholder="Username">
+				<input type="password" name="password" placeholder="Password">
+				<button type="submit" name="button">Submit</button>
+			</form>
+		</div>
+
+		
 	</div>
-	
-	<div class="pagination"><span>1</span>
+
+	<div class="pagination">
+		<a href="/jamsite/first-page/" class="left arrow">&#8592;</a>
+
+		<a href="#" class="top">Top</a>
 	</div>
 </main>
 
 
         		<footer>
 			<span>
-			&copy; <time datetime="2022-02-14 10:24:22.23253 -0500 EST m=&#43;0.159545696">2022</time> . Made with <a href='https://gohugo.io'>Hugo</a> using the <a href='https://github.com/EmielH/tale-hugo/'>Tale</a> theme.
+			&copy; <time datetime="2022-02-14 10:24:22.233416 -0500 EST m=&#43;0.160431184">2022</time> . Made with <a href='https://gohugo.io'>Hugo</a> using the <a href='https://github.com/EmielH/tale-hugo/'>Tale</a> theme.
 			</span>
 		</footer>
 

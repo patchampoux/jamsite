@@ -1,11 +1,9 @@
 backend:
-    name: git-gateway
+    name: github
+    repo: patchampoux/jamsite
 
-# when using the default proxy server port
-local_backend: true
-
-media_folder: static/media
-public_folder: /media
+media_folder: static/images/uploads
+public_folder: /images/uploads
 
 collections:
     - name: pages
