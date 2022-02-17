@@ -1,14 +1,13 @@
 ---
-title: First Page
+title: "First Page"
 date: 2019-11-06T17:00:08+02:00
 draft: false
 author: Ray Viljoen
 ---
+
 # First JAMSite Page
 
 Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec ullamcorper nulla non metus auctor fringilla. Aenean lacinia bibendum nulla sed consectetur. Aenean lacinia bibendum nulla sed consectetur. Vestibulum id ligula porta felis euismod semper.
-
-asdasdasd
 
 Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Maecenas faucibus mollis interdum. Vestibulum id ligula porta felis euismod semper. Donec ullamcorper nulla non metus auctor fringilla. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
 
