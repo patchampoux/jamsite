@@ -1,4 +1,4 @@
-baseURL = "https://patchampoux.github.io/jamsite/"
+baseURL = "https://blissful-yalow-86b060.netlify.app/"
 languageCode = "en-us"
 title = "JAMSite"
 theme = "tale"
